@@ -29,7 +29,7 @@ class _HomeWidgetState extends State<HomeWidget> {
       body: widgetOptions.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
+        unselectedItemColor: Colors.black,
         showSelectedLabels: true,
         showUnselectedLabels: true,
         elevation: 0,
@@ -38,19 +38,19 @@ class _HomeWidgetState extends State<HomeWidget> {
         items: [
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/home-icon.svg'),
-            label: "add",
+            label: "",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/transactions-icon.svg'),
-            label: "add",
+            label: "",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/settings-icon.svg'),
-            label: "add",
+            label: "",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/smiley-icon.svg'),
-            label: "add",
+            label: "",
           ),
         ],
       ),

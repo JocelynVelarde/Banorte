@@ -49,7 +49,7 @@ class _TransactionPageState extends State<TransactionPage> {
                       const EdgeInsets.only(left: 16.0, top: 32.0, bottom: 8.0),
                   child: Row(
                     children: [
-                      Text('Outgoing Transaction',
+                      Text('Transacción Saliente',
                           style: ThemeStyles.primaryTitle),
                     ],
                   ),
@@ -66,7 +66,7 @@ class _TransactionPageState extends State<TransactionPage> {
                       const EdgeInsets.only(left: 16.0, top: 32.0, bottom: 8.0),
                   child: Row(
                     children: [
-                      Text('Details', style: ThemeStyles.primaryTitle),
+                      Text('Detalles', style: ThemeStyles.primaryTitle),
                     ],
                   ),
                 ),
@@ -78,7 +78,7 @@ class _TransactionPageState extends State<TransactionPage> {
                         padding: const EdgeInsets.only(right: 12.0),
                         child: SvgPicture.asset('assets/bankTransfer-icon.svg'),
                       ),
-                      Text('Bank Transfer',
+                      Text('Transferencia Bancaria',
                           style: ThemeStyles.otherDetailsPrimary),
                     ],
                   ),

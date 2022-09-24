@@ -15,7 +15,7 @@ class _AppbarState extends State<Appbar> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Home',
+            'Banorte',
             style: TextStyle(
               fontSize: 25.0,
               fontWeight: FontWeight.w800,

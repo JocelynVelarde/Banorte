@@ -43,8 +43,8 @@ class _CardsListState extends State<CardsList> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Your Cards', style: ThemeStyles.primaryTitle),
-                Text('See All', style: ThemeStyles.seeAll),
+                Text('Tus Tarjetas', style: ThemeStyles.primaryTitle),
+                Text('Ver Todas', style: ThemeStyles.seeAll),
               ],
             ),
           ),
