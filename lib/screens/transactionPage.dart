@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/utilities/themeColors.dart';
 import 'package:flutter_application_3/utilities/themeStyles.dart';
-import 'package:flutter_application_3/widgets/addNote.dart';
 import 'package:flutter_application_3/widgets/cardInPage.dart';
 import 'package:flutter_application_3/widgets/otherDetailsDivider.dart';
 import 'package:flutter_svg/svg.dart';
@@ -40,6 +39,7 @@ class _TransactionPageState extends State<TransactionPage> {
         ),
       ),
       body: Container(
+        color: Colors.blue,
         child: Stack(
           children: [
             ListView(

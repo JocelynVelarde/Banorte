@@ -23,8 +23,13 @@ class _RecentTransactionsState extends State<RecentTransactions> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Recent Transactions', style: ThemeStyles.primaryTitle),
-                Text('See All', style: ThemeStyles.seeAll),
+                Text('Transacciones Recientes',
+                    style: ThemeStyles.primaryTitle),
+                Text('Ver Todas',
+                    style: TextStyle(
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white)),
               ],
             ),
           ),
@@ -39,7 +44,7 @@ class _RecentTransactionsState extends State<RecentTransactions> {
                   letter: 'F',
                   title: 'Fintory GmbH',
                   subTitle: 'Finance Landing Page',
-                  price: '- 5.720,30 €',
+                  price: '- 5.720,30 ',
                 ),
                 TransactionCard(
                   color: Color(0xfffe695d),

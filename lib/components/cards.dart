@@ -43,8 +43,16 @@ class _CardsListState extends State<CardsList> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('Tus Tarjetas', style: ThemeStyles.primaryTitle),
-                Text('Ver Todas', style: ThemeStyles.seeAll),
+                Text('Tus Tarjetas',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white)),
+                Text('Ver Todas',
+                    style: TextStyle(
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white)),
               ],
             ),
           ),

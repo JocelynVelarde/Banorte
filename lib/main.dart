@@ -13,8 +13,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primaryColor: Colors.black,
-        scaffoldBackgroundColor: Colors.black,
+        primaryColor: Color.fromARGB(44, 58, 58, 57),
+        scaffoldBackgroundColor: Color.fromARGB(255, 28, 29, 30),
       ),
       debugShowCheckedModeBanner: false,
       home: HomeWidget(),

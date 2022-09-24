@@ -19,6 +19,7 @@ class _AppbarState extends State<Appbar> {
             style: TextStyle(
               fontSize: 25.0,
               fontWeight: FontWeight.w800,
+              color: Colors.white,
             ),
           ),
           Row(
