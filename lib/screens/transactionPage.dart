@@ -28,8 +28,9 @@ class _TransactionPageState extends State<TransactionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.red,
         centerTitle: true,
-        title: Text('Sent'),
+        title: Text('Enviadas'),
         elevation: 0.0,
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
@@ -50,7 +51,10 @@ class _TransactionPageState extends State<TransactionPage> {
                   child: Row(
                     children: [
                       Text('Transacción Saliente',
-                          style: ThemeStyles.primaryTitle),
+                          style: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white))
                     ],
                   ),
                 ),
@@ -66,7 +70,11 @@ class _TransactionPageState extends State<TransactionPage> {
                       const EdgeInsets.only(left: 16.0, top: 32.0, bottom: 8.0),
                   child: Row(
                     children: [
-                      Text('Detalles', style: ThemeStyles.primaryTitle),
+                      Text('Detalles',
+                          style: TextStyle(
+                              fontSize: 20.0,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.white)),
                     ],
                   ),
                 ),
@@ -79,7 +87,10 @@ class _TransactionPageState extends State<TransactionPage> {
                         child: SvgPicture.asset('assets/bankTransfer-icon.svg'),
                       ),
                       Text('Transferencia Bancaria',
-                          style: ThemeStyles.otherDetailsPrimary),
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white)),
                     ],
                   ),
                 ),
@@ -140,10 +151,17 @@ class _TransactionPageState extends State<TransactionPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('IBAN', style: ThemeStyles.otherDetailsSecondary),
+                      Text('IBAN',
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('DE56 3902 0000 1203 2339 39',
-                          style: ThemeStyles.otherDetailsPrimary),
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white)),
                     ],
                   ),
                 ),
@@ -153,10 +171,17 @@ class _TransactionPageState extends State<TransactionPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('BIC', style: ThemeStyles.otherDetailsSecondary),
+                      Text('BIC',
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('DUISDE33XX',
-                          style: ThemeStyles.otherDetailsPrimary),
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white)),
                     ],
                   ),
                 ),
@@ -166,10 +191,17 @@ class _TransactionPageState extends State<TransactionPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Posting Key',
-                          style: ThemeStyles.otherDetailsSecondary),
+                      Text('Clave de Contabilización',
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
-                      Text('153', style: ThemeStyles.otherDetailsPrimary),
+                      Text('153',
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white)),
                     ],
                   ),
                 ),
@@ -180,10 +212,16 @@ class _TransactionPageState extends State<TransactionPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Posting Text',
-                          style: ThemeStyles.otherDetailsSecondary),
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('Landing Page',
-                          style: ThemeStyles.otherDetailsPrimary),
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white)),
                     ],
                   ),
                 ),
@@ -193,10 +231,17 @@ class _TransactionPageState extends State<TransactionPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Purpose Code',
-                          style: ThemeStyles.otherDetailsSecondary),
+                      Text('Código de Propósito',
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
-                      Text('OLOA', style: ThemeStyles.otherDetailsPrimary),
+                      Text('OLOA',
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white)),
                     ],
                   ),
                 ),
@@ -206,32 +251,23 @@ class _TransactionPageState extends State<TransactionPage> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('SEPA Reference',
-                          style: ThemeStyles.otherDetailsSecondary),
+                      Text('Referencia SEPA',
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('DE56 3902 0000 1203 2339 39',
-                          style: ThemeStyles.otherDetailsPrimary),
-                    ],
-                  ),
-                ),
-                OtherDetailsDivider(),
-                Padding(
-                  padding: const EdgeInsets.only(left: 16.0, top: 5.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('SEPA Reference',
-                          style: ThemeStyles.otherDetailsSecondary),
-                      SizedBox(height: 5.0),
-                      Text('DE56 3902 0000 1203 2339 39',
-                          style: ThemeStyles.otherDetailsPrimary),
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.w400,
+                              color: Colors.white)),
                     ],
                   ),
                 ),
                 OtherDetailsDivider(),
               ],
             ),
-            AddNote(),
           ],
         ),
       ),

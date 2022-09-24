@@ -5,7 +5,7 @@ class ThemeStyles {
   static TextStyle primaryTitle = TextStyle(
     fontSize: 20.0,
     fontWeight: FontWeight.w600,
-    color: ThemeColors.black,
+    color: Colors.white,
   );
   static TextStyle seeAll = TextStyle(
     fontSize: 17.0,
