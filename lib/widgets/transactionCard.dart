@@ -1,104 +1,123 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/screens/transactionPage.dart';
-import 'package:flutter_application_3/utilities/themeStyles.dart';
+import 'KeyPad.dart';
 
-class TransactionCard extends StatefulWidget {
-  final String title;
-  final String subTitle;
-  final String price;
-  final String letter;
-  final Color color;
-  TransactionCard({
-    this.color,
-    this.letter,
-    this.price,
-    this.subTitle,
-    this.title,
-  });
-  @override
-  _TransactionCardState createState() => _TransactionCardState();
+class CodeUnlock extends StatefulWidget {
+ @override
+ _CodeUnlockState createState() => _CodeUnlockState();
 }
 
-class _TransactionCardState extends State<TransactionCard> {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
-      child: GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => TransactionPage(
-                color: widget.color,
-                title: widget.title,
-                subTitle: widget.subTitle,
-                price: widget.price,
-                letter: widget.letter,
-              ),
-            ),
-          );
-        },
-        child: Container(
-          height: 62.0,
-          width: 343.0,
-          child: Column(
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        height: 44.0,
-                        width: 44.0,
-                        decoration: BoxDecoration(
-                          color: widget.color,
-                          borderRadius: BorderRadius.circular(22.0),
-                        ),
-                        child: Center(
-                          child: Text(
-                            widget.letter,
-                            style: TextStyle(
-                              fontSize: 30.0,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                      SizedBox(width: 16.0),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(widget.title,
-                              style: ThemeStyles.otherDetailsPrimary),
-                          Text(widget.subTitle,
-                              style: ThemeStyles.otherDetailsSecondary),
-                        ],
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Text(widget.price, style: TextStyle(color: Colors.red)),
-                      SizedBox(width: 4.0),
-                      Icon(Icons.keyboard_arrow_right),
-                    ],
-                  )
-                ],
-              ),
-              Divider(
-                color: Colors.grey.withOpacity(0.5),
-                thickness: 0.5,
-                endIndent: 16.0,
-                indent: 16.0,
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
+class _CodeUnlockState extends State {
+
+ String displayCode;
+ TextEditingController pinController = TextEditingController();
+
+ @override
+ void initState() {
+   // TODO: implement initState
+   super.initState();
+   displayCode = getNextCode();
+ }
+ @override
+ Widget build(BuildContext context) {
+   return Scaffold(
+     appBar: AppBar(
+       title: Text('CODE UNLOCK'),
+       backgroundColor: Colors.blue,
+     ),
+     body: Builder(
+       builder: (context) =>
+       Center(
+         child: Column(
+           mainAxisAlignment: MainAxisAlignment.center,
+           children: [
+             Padding(
+                 padding: EdgeInsets.only(bottom: 20),
+               child: Text(
+                 displayCode,
+                 style: TextStyle(
+                   color: Colors.blue,
+                   fontSize: 50,
+                   fontWeight: FontWeight.bold
+                   // fontFamily: AppTextStyle.robotoBold
+                 ),
+               ),
+             ),
+             Padding(
+               padding: EdgeInsets.only(left:50, right:50, bottom: 15),
+               child: Container(
+                 decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(5),
+                     color: Colors.orangeAccent,
+                     border: Border.all(color: Colors.orangeAccent, width: 1.5)),
+                 child: Padding(
+                   padding: EdgeInsets.only(left: 15),
+                   child: TextField(
+                     controller: pinController,
+                     readOnly: true,
+                     textAlign: TextAlign.center,
+                     style: TextStyle(
+                       color: Colors.black,
+                       fontSize: 26,
+                       // fontWeight: FontWeight.bold
+                       // fontFamily: AppTextStyle.robotoBold
+                     ),
+                     decoration: InputDecoration(
+                       border: InputBorder.none,
+                       hintText: 'Enter PIN',
+                     ),
+                     // controller: userDisplayName,
+                   ),
+                 ),
+               ),
+             ),
+             KeyPad(
+               pinController: pinController,
+               isPinLogin: false,
+               onChange: (String pin) {
+                 pinController.text = pin;
+                 print('${pinController.text}');
+                 setState(() {});
+               },
+               onSubmit: (String pin) {
+                 if (pin.length != 4) {
+                   (pin.length == 0) ? showInSnackBar('Please Enter Pin') : showInSnackBar('Wrong Pin');
+                   return;
+
+                 } else {
+
+                   pinController.text = pin;
+
+                   if (pinController.text == displayCode){
+                     showInSnackBar('Pin Match');
+                     setState(() {
+                       displayCode = getNextCode();
+                     });
+                   }else{
+                     showInSnackBar('Wrong pin');
+                   }
+                   print('Pin is ${pinController.text}');
+                 }
+               },
+             ),
+           ],
+         ),
+       ),
+     ),
+   );
+ }
+
+ void showInSnackBar(String value) {
+   Scaffold.of(context).showSnackBar(new SnackBar(
+       content: new Text(value)
+   ));
+ }
+
+ getNextCode(){
+   pinController.text = '';
+   var rng = new Random();
+   var code = (rng.nextInt(9000) + 1000).toString();
+   print('Random No is : $code');
+   return code;
+ }
 }
