@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/screens/home.dart';
+import 'package:flutter_application_3/screens/settings_screen.dart';
 import 'package:flutter_application_3/screens/transacciones.dart';
-import 'package:flutter_application_3/screens/transactionPage.dart';
+
 import 'package:flutter_svg/svg.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomeWidgetState extends State<HomeWidget> {
     List<Widget> widgetOptions = <Widget>[
       HomeScreen(),
       CodeUnlock(),
-      HomeScreen(),
+      SettingsScreen(),
       HomeScreen(),
     ];
     void onTabTapped(index) {
@@ -30,7 +31,7 @@ class _HomeWidgetState extends State<HomeWidget> {
     return Scaffold(
       body: widgetOptions.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.black,
+        selectedItemColor: Colors.redAccent,
         unselectedItemColor: Colors.black,
         showSelectedLabels: true,
         showUnselectedLabels: true,
