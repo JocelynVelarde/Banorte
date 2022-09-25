@@ -14,7 +14,7 @@ class SurveyScreenState extends State<SurveyScreen> {
     return TextFormField(
         style: TextStyle(color: Colors.white),
         decoration: InputDecoration(
-          labelText: 'Name',
+          labelText: '¿Te ha gustado la app?',
           labelStyle: TextStyle(color: Colors.white),
           enabledBorder:
               UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
@@ -24,7 +24,7 @@ class SurveyScreenState extends State<SurveyScreen> {
   Widget Q2() {
     return TextFormField(
       decoration: InputDecoration(
-        labelText: 'Email',
+        labelText: '¿Cuál ha sido tu función favorita?',
         labelStyle: TextStyle(color: Colors.white),
         enabledBorder:
             UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
@@ -35,7 +35,7 @@ class SurveyScreenState extends State<SurveyScreen> {
   Widget Q3() {
     return TextFormField(
       decoration: InputDecoration(
-        labelText: 'Password',
+        labelText: '¿Qué mejora propones a la app?',
         labelStyle: TextStyle(color: Colors.white),
         enabledBorder:
             UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),
@@ -46,7 +46,7 @@ class SurveyScreenState extends State<SurveyScreen> {
   Widget Q4() {
     return TextFormField(
       decoration: InputDecoration(
-        labelText: 'Url',
+        labelText: '¿Otros comentarios?',
         labelStyle: TextStyle(color: Colors.white),
         enabledBorder:
             UnderlineInputBorder(borderSide: BorderSide(color: Colors.white)),

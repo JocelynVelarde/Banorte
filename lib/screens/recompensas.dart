@@ -131,7 +131,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                           title: Text("Siguiente: Nivel 3",
                                               style: TextStyle(
                                                   color: Colors.white)),
-                                          subtitle: Text("En 600 puntos",
+                                          subtitle: Text("Faltan 600 puntos",
                                               style: TextStyle(
                                                   color: Colors.white)),
                                         ),
@@ -143,7 +143,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                           title: Text("Siguiente recompensa:",
                                               style: TextStyle(
                                                   color: Colors.white)),
-                                          subtitle: Text("hhh",
+                                          subtitle: Text("Preferencia en fila",
                                               style: TextStyle(
                                                   color: Colors.white)),
                                         ),
