@@ -86,11 +86,11 @@ class KeyPad extends StatelessWidget {
       width: buttonSize,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
+          primary: Color.fromARGB(255, 28, 29, 30),
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(buttonSize / 2),
               side: BorderSide(
                   color: Color.fromARGB(0, 255, 255, 255), width: 0.5)),
-          //backgroundColor: Color.fromARGB(255, 28, 29, 30),
         ),
         onPressed: () {
           if (pinController.text.length <= 14) {
