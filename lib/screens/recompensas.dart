@@ -25,7 +25,6 @@ class _ProfilePageState extends State<ProfilePage> {
                   end: Alignment.bottomRight,
                   colors: <Color>[
                 Theme.of(context).primaryColor,
-                Theme.of(context).colorScheme.error,
               ])),
         ),
       ),

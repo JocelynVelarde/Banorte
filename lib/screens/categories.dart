@@ -100,10 +100,8 @@ class _CategorySpendState extends State<CategorySpend> {
                                                     color: Colors.white)),
                                           ),
                                           ListTile(
-                                            leading: Icon(
-                                                Icons.hdr_plus_rounded,
-                                                color: Colors.white,
-                                                size: 30),
+                                            leading: Icon(Icons.add,
+                                                color: Colors.white, size: 30),
                                             title: Text("Agregar categoría",
                                                 style: TextStyle(
                                                     color: Colors.white)),
