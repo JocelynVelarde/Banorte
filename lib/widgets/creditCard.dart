@@ -46,6 +46,19 @@ class _CreditCardState extends State<CreditCard> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Align(
+                      alignment: Alignment.topRight,
+                      child: Padding(
+                        padding: EdgeInsets.only(right: 10, bottom: 22),
+                        child: Text("\$692.52",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w500,
+                              fontSize: 20,
+                            )),
+                      ),
+                    ),
                     Text('Marián Charles',
                         style: TextStyle(
                           color: Colors.white,
