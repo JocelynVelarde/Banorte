@@ -89,7 +89,7 @@ class _CategorySpendState extends State<CategorySpend> {
                                                     color: Colors.white)),
                                             subtitle: Text("\$1858 este mes",
                                                 style: TextStyle(
-                                                    color: Colors.greenAccent)),
+                                                    color: Colors.yellowAccent)),
                                           ),
                                           ListTile(
                                             title: Text("Servicios:",
@@ -156,7 +156,7 @@ class _CategorySpendState extends State<CategorySpend> {
                                           ),
                                           ListTile(
                                             leading: Icon(Icons.warning,
-                                                color: Colors.yellow, size: 25),
+                                                color: Colors.yellowAccent, size: 25),
                                             title: Text("Transporte:",
                                                 style: TextStyle(
                                                     color: Colors.white)),
