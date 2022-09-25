@@ -15,6 +15,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         title: Text('Contactos'),
+       backgroundColor: Colors.redAccent, 
       ),
       body: ListView.builder(
         itemBuilder: (builder, index) {
@@ -25,6 +26,7 @@ return ListTile(
             onLongPress: () => onLongPress(isSelected, index),
             onTap: () => onTap(isSelected, index),
             title: Text("${data['name']}"),
+            textColor: Colors.white,
             subtitle: Text("${data['email']}"),
             leading: _buildSelectIcon(isSelected, data),
           );
@@ -58,7 +60,8 @@ Widget _buildSelectIcon(bool isSelected, Map data) {
       );
     } else {
       return CircleAvatar(
-        child: Text('${data['id']}'),
+        child: Text('${data['name'][0]}'),
+        backgroundColor: Colors.redAccent,
       );
     }
   }
