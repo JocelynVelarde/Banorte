@@ -51,12 +51,11 @@ class _HomeWidgetState extends State<HomeWidget> {
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/transactions-icon.svg',
-              color: Colors.white,
-            ),
-            label: "",
-          ),
+              icon: Icon(
+                Icons.payment,
+                color: Colors.white,
+              ),
+              label: ""),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.settings,
@@ -64,19 +63,17 @@ class _HomeWidgetState extends State<HomeWidget> {
               ),
               label: ""),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/smiley-icon.svg',
-              color: Colors.white,
-            ),
-            label: "",
-          ),
+              icon: Icon(
+                Icons.diamond,
+                color: Colors.white,
+              ),
+              label: ""),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/smiley-icon.svg',
-              color: Colors.white,
-            ),
-            label: "",
-          ),
+              icon: Icon(
+                Icons.account_balance,
+                color: Colors.white,
+              ),
+              label: ""),
         ],
       ),
     );
