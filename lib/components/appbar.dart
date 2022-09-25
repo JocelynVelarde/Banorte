@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/widgets/otherDetailsDivider.dart';
 import 'package:flutter_svg/svg.dart';
 
 class Appbar extends StatefulWidget {
@@ -15,13 +16,17 @@ class _AppbarState extends State<Appbar> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            'Banorte',
+            "BANORTE",
             style: TextStyle(
-              fontSize: 25.0,
-              fontWeight: FontWeight.w800,
-              color: Colors.redAccent,
-            ),
+                color: Colors.white,
+                fontSize: 30.0,
+                fontWeight: FontWeight.w600),
           ),
+          SvgPicture.asset(
+            ('assets/hi.svg'),
+            color: Colors.redAccent,
+            alignment: Alignment(50, 0),
+          )
         ],
       ),
     );
