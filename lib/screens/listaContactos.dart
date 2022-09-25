@@ -5,24 +5,32 @@ class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
+
 class _HomePageState extends State<HomePage> {
   bool isSelectionMode = false;
   List<Map> staticData = MyData.data;
   Map<int, bool> selectedFlag = {};
-@override
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
         title: Text('Contactos'),
-       backgroundColor: Colors.redAccent, 
+        backgroundColor: Colors.redAccent,
       ),
       body: ListView.builder(
         itemBuilder: (builder, index) {
           Map data = staticData[index];
           selectedFlag[index] = selectedFlag[index] ?? false;
           bool isSelected = selectedFlag[index];
-return ListTile(
+          Container(
+            child: GestureDetector(
+              onDoubleTap: (() {
+                showInSnackBar("Transacción Exitosa :)");
+              }),
+            ),
+          );
+          return ListTile(
             onLongPress: () => onLongPress(isSelected, index),
             onTap: () => onTap(isSelected, index),
             title: Text("${data['name']}"),
@@ -36,7 +44,8 @@ return ListTile(
       floatingActionButton: _buildSelectAllButton(),
     );
   }
-void onTap(bool isSelected, int index) {
+
+  void onTap(bool isSelected, int index) {
     if (isSelectionMode) {
       setState(() {
         selectedFlag[index] = !isSelected;
@@ -46,26 +55,29 @@ void onTap(bool isSelected, int index) {
       // Open Detail Page
     }
   }
-void onLongPress(bool isSelected, int index) {
+
+  void onLongPress(bool isSelected, int index) {
     setState(() {
       selectedFlag[index] = !isSelected;
       isSelectionMode = selectedFlag.containsValue(true);
     });
   }
-Widget _buildSelectIcon(bool isSelected, Map data) {
+
+  Widget _buildSelectIcon(bool isSelected, Map data) {
     if (isSelectionMode) {
       return Icon(
         isSelected ? Icons.check_box : Icons.check_box_outline_blank,
-        color: Theme.of(context).primaryColor,
+        color: Colors.white,
       );
     } else {
       return CircleAvatar(
-        child: Text('${data['name'][0]}'+ '${data['name'][1]}'),
+        child: Text('${data['name'][0]}' + '${data['name'][1]}'),
         backgroundColor: Colors.redAccent,
       );
     }
   }
-Widget _buildSelectAllButton() {
+
+  Widget _buildSelectAllButton() {
     bool isFalseAvailable = selectedFlag.containsValue(false);
     if (isSelectionMode) {
       return FloatingActionButton(
@@ -78,7 +90,8 @@ Widget _buildSelectAllButton() {
       return null;
     }
   }
-void _selectAll() {
+
+  void _selectAll() {
     bool isFalseAvailable = selectedFlag.containsValue(false);
     // If false will be available then it will select all the checkbox
     // If there will be no false then it will de-select all
@@ -86,5 +99,10 @@ void _selectAll() {
     setState(() {
       isSelectionMode = selectedFlag.containsValue(true);
     });
+  }
+
+  void showInSnackBar(String value) {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(new SnackBar(content: new Text(value)));
   }
 }
