@@ -67,7 +67,10 @@ class _CardInPageState extends State<CardInPage> {
                   children: [
                     Text(widget.price, style: TextStyle(color: Colors.red)),
                     SizedBox(width: 4.0),
-                    Icon(Icons.keyboard_arrow_right),
+                    Icon(
+                      Icons.keyboard_arrow_right,
+                      color: Colors.white,
+                    ),
                   ],
                 )
               ],
