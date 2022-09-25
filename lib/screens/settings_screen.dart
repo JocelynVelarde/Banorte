@@ -19,45 +19,47 @@ class _SettingsScreenState extends State<SettingsScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                "Settings",
-                style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
+                "Ajustes",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 60, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 40),
               SettingsTile(
-                icon: Icons.ac_unit,
-                title: "Account",
+                icon: Icons.account_box_rounded,
+                title: "Perfil",
                 onTap: () {},
               ),
               const SizedBox(
-                height: 10,
+                height: 40  ,
               ),
               SettingsTile(
-                icon: Icons.accessible_forward,
-                title: "Edit Information",
-                onTap: () {},
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              SettingsTile(
-                icon: Icons.money_off,
-                title: "Theme",
-                onTap: () {},
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              SettingsTile(
-                icon: Icons.arrow_forward_ios_sharp,
-                title: "Language",
+                icon: Icons.support_agent,
+                title: "Soporte Tecnico",
                 onTap: () {},
               ),
               const SizedBox(
                 height: 40,
               ),
               SettingsTile(
-                icon: Icons.ac_unit_sharp,
-                title: "Logout",
+                icon: Icons.mood,
+                title: "Modalidad",
+                onTap: () {},
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              SettingsTile(
+                icon: Icons.language,
+                title: "Idioma",
+                onTap: () {},
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              SettingsTile(
+                icon: Icons.logout_rounded,
+                title: "Cerran Sesion",
                 onTap: () {},
               ),
             ],
