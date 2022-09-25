@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/screens/home.dart';
+import 'package:flutter_application_3/screens/transacciones.dart';
 import 'package:flutter_application_3/screens/transactionPage.dart';
-import 'package:flutter_application_3/widgets/transactionCard.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HomeWidget extends StatefulWidget {

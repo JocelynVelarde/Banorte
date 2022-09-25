@@ -78,14 +78,8 @@ class KeyPad extends StatelessWidget{
    return Container(
      height: buttonSize,
      width: buttonSize,
-     child: RaisedButton(
-       color: Colors.blue,
-       shape: RoundedRectangleBorder(
-         borderRadius: BorderRadius.circular(buttonSize / 2),
-       ),
-       focusColor: Colors.blue,
-       hoverColor: Colors.blue,
-       highlightColor: Colors.blue,
+     child: ElevatedButton(
+     
        onPressed: () {
          if (pinController.text.length <= 3) {
            pinController.text = pinController.text + buttonText;

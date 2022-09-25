@@ -108,9 +108,7 @@ class _CodeUnlockState extends State {
  }
 
  void showInSnackBar(String value) {
-   Scaffold.of(context).showSnackBar(new SnackBar(
-       content: new Text(value)
-   ));
+   ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text(value)));
  }
 
  getNextCode(){
