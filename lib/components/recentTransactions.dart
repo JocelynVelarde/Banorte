@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/utilities/themeStyles.dart';
+import 'package:flutter_application_3/widgets/TransactionCardd.dart';
 import 'package:flutter_application_3/widgets/transactionCard.dart';
 
 class RecentTransactions extends StatefulWidget {

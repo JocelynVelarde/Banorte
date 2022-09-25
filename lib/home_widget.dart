@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/screens/home.dart';
+import 'package:flutter_application_3/screens/transactionPage.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -15,7 +16,7 @@ class _HomeWidgetState extends State<HomeWidget> {
   Widget build(BuildContext context) {
     List<Widget> widgetOptions = <Widget>[
       HomeScreen(),
-      HomeScreen(),
+      TransactionPage(),
       HomeScreen(),
       HomeScreen(),
     ];
@@ -41,7 +42,9 @@ class _HomeWidgetState extends State<HomeWidget> {
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/transactions-icon.svg'),
+            icon: SvgPicture.asset(
+              'assets/transactions-icon.svg',
+            ),
             label: "",
           ),
           BottomNavigationBarItem(
