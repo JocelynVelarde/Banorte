@@ -41,7 +41,7 @@ class _CategorySpendState extends State<CategorySpend> {
                       height: 20,
                     ),
                     Text(
-                      'Categorías:',
+                      'Tus Gastos:',
                       style: TextStyle(
                           fontSize: 25,
                           fontWeight: FontWeight.bold,
@@ -79,25 +79,25 @@ class _CategorySpendState extends State<CategorySpend> {
                                             title: Text("Comida:",
                                                 style: TextStyle(
                                                     color: Colors.white)),
-                                            subtitle: Text("\$5000 este mes",
+                                            subtitle: Text("\$628 este mes",
                                                 style: TextStyle(
-                                                    color: Colors.white)),
+                                                    color: Colors.greenAccent)),
                                           ),
                                           ListTile(
                                             title: Text("Transporte:",
                                                 style: TextStyle(
                                                     color: Colors.white)),
-                                            subtitle: Text("\$2000 este mes",
+                                            subtitle: Text("\$1258 este mes",
                                                 style: TextStyle(
-                                                    color: Colors.white)),
+                                                    color: Colors.greenAccent)),
                                           ),
                                           ListTile(
                                             title: Text("Servicios:",
                                                 style: TextStyle(
                                                     color: Colors.white)),
-                                            subtitle: Text("\$2000 este mes",
+                                            subtitle: Text("\$725 este mes",
                                                 style: TextStyle(
-                                                    color: Colors.white)),
+                                                    color: Colors.greenAccent)),
                                           ),
                                           ListTile(
                                             leading: Icon(Icons.add,
@@ -106,6 +106,62 @@ class _CategorySpendState extends State<CategorySpend> {
                                                 style: TextStyle(
                                                     color: Colors.white)),
                                           ),
+                                        ],
+                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          ),
+                      Text(
+                      'Tus Metas:',
+                      style: TextStyle(
+                          fontSize: 25,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                          Card(
+                            child: Container(
+                              color: Color.fromARGB(255, 52, 52, 56),
+                              alignment: Alignment.topLeft,
+                              padding: EdgeInsets.all(15),
+                              child: Column(
+                                children: <Widget>[
+                                  Column(
+                                    children: <Widget>[
+                                      ...ListTile.divideTiles(
+                                        color: Colors.white,
+                                        tiles: [
+                                          ListTile(
+                                            contentPadding:
+                                                EdgeInsets.symmetric(
+                                                    horizontal: 12,
+                                                    vertical: 4),
+                                            title: Text("Comida:",
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                            subtitle: Text("\$628 de 2500 este mes",
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                          ),
+                                          ListTile(
+                                            title: Text("Transporte:",
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                            subtitle: Text("\$1258 de 2000 este mes",
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                          ),
+                                          ListTile(
+                                            title: Text("Servicios:",
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                            subtitle: Text("\$725 de 1500 este mes",
+                                                style: TextStyle(
+                                                    color: Colors.white)),
+                                          ),
+                                          
                                         ],
                                       ),
                                     ],
