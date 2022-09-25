@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/screens/listaContactos.dart';
 import 'package:flutter_application_3/widgets/KeyPad.dart';
 
 class CodeUnlock extends StatefulWidget {
@@ -86,8 +87,10 @@ class _CodeUnlockState extends State {
                   showInSnackBar('Ingrese una cantidad valida');
                  }
                  else{
-                  // Link
-                 }
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage())
+             );}
                },
              ),
            ],
