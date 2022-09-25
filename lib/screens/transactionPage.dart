@@ -39,7 +39,7 @@ class _TransactionPageState extends State<TransactionPage> {
         ),
       ),
       body: Container(
-        color: Colors.blue,
+        color: Colors.black,
         child: Stack(
           children: [
             ListView(
