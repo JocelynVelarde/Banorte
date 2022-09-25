@@ -5,5 +5,4 @@ class ThemeColors {
   static Color black = Color(0xff14121E);
   static Color grey = Color(0xFF8492A2);
   static Color lightRed = Color.fromARGB(0, 255, 104, 104);
-  static Color white = Colors.white;
 }
