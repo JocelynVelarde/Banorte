@@ -61,7 +61,7 @@ class _TransactionCardState extends State<TransactionCard> {
                             widget.letter,
                             style: TextStyle(
                               fontSize: 30.0,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w700,
                               color: Colors.white,
                             ),
                           ),
@@ -73,11 +73,7 @@ class _TransactionCardState extends State<TransactionCard> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(widget.title,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16.0,
-                                fontWeight: FontWeight.w400,
-                              )),
+                              style: ThemeStyles.otherDetailsPrimary),
                           Text(widget.subTitle,
                               style: ThemeStyles.otherDetailsSecondary),
                         ],
@@ -86,19 +82,15 @@ class _TransactionCardState extends State<TransactionCard> {
                   ),
                   Row(
                     children: [
-                      Text(widget.price,
-                          style: TextStyle(color: Colors.redAccent)),
+                      Text(widget.price, style: TextStyle(color: Colors.red)),
                       SizedBox(width: 4.0),
-                      Icon(
-                        Icons.keyboard_arrow_right,
-                        color: Colors.white,
-                      ),
+                      Icon(Icons.keyboard_arrow_right),
                     ],
                   )
                 ],
               ),
               Divider(
-                color: Colors.grey.withOpacity(0.7),
+                color: Colors.grey.withOpacity(0.5),
                 thickness: 0.5,
                 endIndent: 16.0,
                 indent: 16.0,

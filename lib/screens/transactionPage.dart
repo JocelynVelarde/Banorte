@@ -27,7 +27,7 @@ class _TransactionPageState extends State<TransactionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Colors.red,
         centerTitle: true,
         title: Text('Enviadas'),
         elevation: 0.0,
@@ -39,7 +39,7 @@ class _TransactionPageState extends State<TransactionPage> {
         ),
       ),
       body: Container(
-        color: Color.fromARGB(255, 28, 29, 30),
+        color: Colors.blue,
         child: Stack(
           children: [
             ListView(
@@ -155,7 +155,7 @@ class _TransactionPageState extends State<TransactionPage> {
                           style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.w400,
-                              color: Colors.redAccent)),
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('DE56 3902 0000 1203 2339 39',
                           style: TextStyle(
@@ -175,7 +175,7 @@ class _TransactionPageState extends State<TransactionPage> {
                           style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.w400,
-                              color: Colors.redAccent)),
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('DUISDE33XX',
                           style: TextStyle(
@@ -195,7 +195,7 @@ class _TransactionPageState extends State<TransactionPage> {
                           style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.w400,
-                              color: Colors.redAccent)),
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('153',
                           style: TextStyle(
@@ -215,7 +215,7 @@ class _TransactionPageState extends State<TransactionPage> {
                           style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.w400,
-                              color: Colors.redAccent)),
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('Landing Page',
                           style: TextStyle(
@@ -235,7 +235,7 @@ class _TransactionPageState extends State<TransactionPage> {
                           style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.w400,
-                              color: Colors.redAccent)),
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('OLOA',
                           style: TextStyle(
@@ -255,7 +255,7 @@ class _TransactionPageState extends State<TransactionPage> {
                           style: TextStyle(
                               fontSize: 18.0,
                               fontWeight: FontWeight.w400,
-                              color: Colors.redAccent)),
+                              color: Colors.red)),
                       SizedBox(height: 5.0),
                       Text('DE56 3902 0000 1203 2339 39',
                           style: TextStyle(
