@@ -44,12 +44,11 @@ class _HomeWidgetState extends State<HomeWidget> {
         currentIndex: selectedIndex,
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/home-icon.svg',
-              color: Colors.white,
-            ),
-            label: "",
-          ),
+              icon: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+              label: ""),
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.payment,

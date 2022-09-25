@@ -17,7 +17,10 @@ class _CreditCardState extends State<CreditCard> {
         height: 216,
         width: 380,
         decoration: BoxDecoration(
-          color: Colors.lightBlueAccent,
+          image: new DecorationImage(
+            image: new AssetImage("assets/tarjeta.png"),
+            fit: BoxFit.fill,
+          ),
           borderRadius: BorderRadius.circular(20.0),
         ),
         child: Padding(
@@ -32,10 +35,7 @@ class _CreditCardState extends State<CreditCard> {
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('5.720,30 €', style: ThemeStyles.cardMoney),
-                    SvgPicture.asset('assets/hide-icon.svg'),
-                  ],
+                  children: [],
                 ),
               ),
               Padding(
@@ -46,24 +46,43 @@ class _CreditCardState extends State<CreditCard> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Magent Black', style: ThemeStyles.cardDetails),
+                    Text('Marián Charles',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 20,
+                        )),
                     Row(
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(right: 6.0),
-                          child: Text('4756', style: ThemeStyles.cardDetails),
+                          child: Text('4756',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              )),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-                          child: SvgPicture.asset('assets/card-dots.svg'),
+                          child: SvgPicture.asset(
+                            'assets/card-dots.svg',
+                            color: Colors.white,
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 6.0),
-                          child: SvgPicture.asset('assets/card-dots.svg'),
+                          child: SvgPicture.asset('assets/card-dots.svg',
+                              color: Colors.white),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 6.0),
-                          child: Text('9018', style: ThemeStyles.cardDetails),
+                          child: Text('9018',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 20,
+                              )),
                         ),
                       ],
                     )
