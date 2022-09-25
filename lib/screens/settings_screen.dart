@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/screens/encuesta.dart';
 import 'package:flutter_application_3/widgets/settings_tile.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -75,7 +76,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
               SettingsTile(
                 icon: Icons.face,
                 title: "Comparte tu Opinión",
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => SurveyScreen()));
+                },
               ),
             ],
           ),
