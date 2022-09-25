@@ -61,7 +61,7 @@ class _TransactionCardState extends State<TransactionCard> {
                             widget.letter,
                             style: TextStyle(
                               fontSize: 30.0,
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.w500,
                               color: Colors.white,
                             ),
                           ),
@@ -73,24 +73,38 @@ class _TransactionCardState extends State<TransactionCard> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(widget.title,
-                              style: ThemeStyles.otherDetailsPrimary),
-                          Text(widget.subTitle,
-                              style: ThemeStyles.otherDetailsSecondary),
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.w400,
+                              )),
+                          Text(
+                            widget.subTitle,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          )
                         ],
                       )
                     ],
                   ),
                   Row(
                     children: [
-                      Text(widget.price, style: TextStyle(color: Colors.red)),
+                      Text(widget.price,
+                          style: TextStyle(color: Colors.redAccent)),
                       SizedBox(width: 4.0),
-                      Icon(Icons.keyboard_arrow_right),
+                      Icon(
+                        Icons.keyboard_arrow_right,
+                        color: Colors.white,
+                      ),
                     ],
                   )
                 ],
               ),
               Divider(
-                color: Colors.grey.withOpacity(0.5),
+                color: Colors.grey.withOpacity(0.7),
                 thickness: 0.5,
                 endIndent: 16.0,
                 indent: 16.0,

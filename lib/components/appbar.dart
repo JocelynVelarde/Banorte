@@ -19,25 +19,9 @@ class _AppbarState extends State<Appbar> {
             style: TextStyle(
               fontSize: 25.0,
               fontWeight: FontWeight.w800,
-              color: Colors.white,
+              color: Colors.redAccent,
             ),
           ),
-          Row(
-            children: [
-              IconButton(
-                icon: SvgPicture.asset('assets/analytics-icon.svg'),
-                onPressed: null,
-              ),
-              IconButton(
-                icon: SvgPicture.asset('assets/search-icon.svg'),
-                onPressed: null,
-              ),
-              IconButton(
-                icon: SvgPicture.asset('assets/more-icon.svg'),
-                onPressed: null,
-              )
-            ],
-          )
         ],
       ),
     );

@@ -55,8 +55,14 @@ class _CardInPageState extends State<CardInPage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(widget.title,
-                            style: ThemeStyles.otherDetailsPrimary),
+                        Text(
+                          widget.title,
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
+                        ),
                         Text(widget.subTitle,
                             style: ThemeStyles.otherDetailsSecondary),
                       ],
