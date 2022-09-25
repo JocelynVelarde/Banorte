@@ -58,12 +58,11 @@ class _HomeWidgetState extends State<HomeWidget> {
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset(
-              'assets/settings-icon.svg',
-              color: Colors.white,
-            ),
-            label: "",
-          ),
+              icon: Icon(
+                Icons.settings,
+                color: Colors.white,
+              ),
+              label: ""),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/smiley-icon.svg',
