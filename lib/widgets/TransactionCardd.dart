@@ -56,16 +56,7 @@ class _TransactionCardState extends State<TransactionCard> {
                           color: widget.color,
                           borderRadius: BorderRadius.circular(22.0),
                         ),
-                        child: Center(
-                          child: Text(
-                            widget.letter,
-                            style: TextStyle(
-                              fontSize: 30.0,
-                              fontWeight: FontWeight.w500,
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
+                        child: Center(child: Icon(Icons.sell)),
                       ),
                       SizedBox(width: 16.0),
                       Column(
