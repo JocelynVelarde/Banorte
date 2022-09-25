@@ -15,6 +15,7 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData(
         primaryColor: Color.fromARGB(44, 58, 58, 57),
         scaffoldBackgroundColor: Color.fromARGB(255, 28, 29, 30),
+        canvasColor: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
       home: HomeWidget(),

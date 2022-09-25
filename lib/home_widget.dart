@@ -1,8 +1,10 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/screens/home.dart';
 import 'package:flutter_application_3/screens/recompensas.dart';
 import 'package:flutter_application_3/screens/settings_screen.dart';
 import 'package:flutter_application_3/screens/transacciones.dart';
+import 'package:flutter_application_3/screens/categories.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HomeWidget extends StatefulWidget {
@@ -21,6 +23,7 @@ class _HomeWidgetState extends State<HomeWidget> {
       CodeUnlock(),
       SettingsScreen(),
       ProfilePage(),
+      CategorySpend()
     ];
     void onTabTapped(index) {
       setState(() {
@@ -43,28 +46,35 @@ class _HomeWidgetState extends State<HomeWidget> {
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/home-icon.svg',
-              color: Colors.redAccent,
+              color: Colors.white,
             ),
             label: "",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/transactions-icon.svg',
-              color: Colors.redAccent,
+              color: Colors.white,
             ),
             label: "",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/settings-icon.svg',
-              color: Colors.redAccent,
+              color: Colors.white,
             ),
             label: "",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/smiley-icon.svg',
-              color: Colors.redAccent,
+              color: Colors.white,
+            ),
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: SvgPicture.asset(
+              'assets/smiley-icon.svg',
+              color: Colors.white,
             ),
             label: "",
           ),

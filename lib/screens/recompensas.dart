@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../widgets/header_widget.dart';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -13,12 +12,12 @@ class _ProfilePageState extends State<ProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.redAccent,
         title: Text(
-          "Profile Page",
+          "Tus Puntos",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
         elevation: 0.5,
-        iconTheme: IconThemeData(color: Colors.white),
         flexibleSpace: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(
@@ -26,17 +25,13 @@ class _ProfilePageState extends State<ProfilePage> {
                   end: Alignment.bottomRight,
                   colors: <Color>[
                 Theme.of(context).primaryColor,
-                Theme.of(context).accentColor,
+                Theme.of(context).colorScheme.error,
               ])),
         ),
       ),
       body: SingleChildScrollView(
         child: Stack(
           children: [
-            Container(
-              height: 100,
-              child: HeaderWidget(100, false, Icons.house_rounded),
-            ),
             Container(
               alignment: Alignment.center,
               margin: EdgeInsets.fromLTRB(25, 10, 25, 10),
@@ -47,8 +42,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(100),
-                      border: Border.all(width: 5, color: Colors.white),
-                      color: Colors.white,
+                      color: Color.fromARGB(255, 28, 29, 30),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black12,
@@ -58,24 +52,30 @@ class _ProfilePageState extends State<ProfilePage> {
                       ],
                     ),
                     child: Icon(
-                      Icons.person,
-                      size: 80,
-                      color: Colors.grey.shade300,
+                      Icons.auto_awesome_rounded,
+                      size: 70,
+                      color: Color.fromARGB(255, 235, 220, 91),
                     ),
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   Text(
-                    'Mr. Donald Trump',
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    'Puntos:',
+                    style: TextStyle(
+                        fontSize: 25,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   Text(
-                    'Former President',
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    '900',
+                    style: TextStyle(
+                        fontSize: 60,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
                   ),
                   SizedBox(
                     height: 10,
@@ -88,18 +88,10 @@ class _ProfilePageState extends State<ProfilePage> {
                           padding:
                               const EdgeInsets.only(left: 8.0, bottom: 4.0),
                           alignment: Alignment.topLeft,
-                          child: Text(
-                            "User Information",
-                            style: TextStyle(
-                              color: Colors.black87,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16,
-                            ),
-                            textAlign: TextAlign.left,
-                          ),
                         ),
                         Card(
                           child: Container(
+                            color: Color.fromARGB(255, 52, 52, 56),
                             alignment: Alignment.topLeft,
                             padding: EdgeInsets.all(15),
                             child: Column(
@@ -107,31 +99,54 @@ class _ProfilePageState extends State<ProfilePage> {
                                 Column(
                                   children: <Widget>[
                                     ...ListTile.divideTiles(
-                                      color: Colors.grey,
+                                      color: Colors.white,
                                       tiles: [
                                         ListTile(
                                           contentPadding: EdgeInsets.symmetric(
                                               horizontal: 12, vertical: 4),
-                                          leading: Icon(Icons.my_location),
-                                          title: Text("Location"),
-                                          subtitle: Text("USA"),
+                                          leading: Icon(Icons.star,
+                                              color: Colors.white, size: 30),
+                                          title: Text("Nivel 2",
+                                              style: TextStyle(
+                                                  color: Colors.white)),
+                                          subtitle: Text("900 de 1500 puntos",
+                                              style: TextStyle(
+                                                  color: Colors.white)),
                                         ),
                                         ListTile(
-                                          leading: Icon(Icons.email),
-                                          title: Text("Email"),
-                                          subtitle:
-                                              Text("donaldtrump@gmail.com"),
-                                        ),
-                                        ListTile(
-                                          leading: Icon(Icons.phone),
-                                          title: Text("Phone"),
-                                          subtitle: Text("99--99876-56"),
-                                        ),
-                                        ListTile(
-                                          leading: Icon(Icons.person),
-                                          title: Text("About Me"),
+                                          leading: Icon(Icons.calendar_month,
+                                              color: Colors.white, size: 30),
+                                          title: Text("400",
+                                              style: TextStyle(
+                                                  color: Colors.white)),
                                           subtitle: Text(
-                                              "This is a about me link and you can khow about me in this section."),
+                                              "Puntos acumulados este mes",
+                                              style: TextStyle(
+                                                  color: Colors.white)),
+                                        ),
+                                        ListTile(
+                                          leading: Icon(
+                                              Icons.arrow_circle_up_outlined,
+                                              color: Colors.white,
+                                              size: 30),
+                                          title: Text("Siguiente: Nivel 3",
+                                              style: TextStyle(
+                                                  color: Colors.white)),
+                                          subtitle: Text("En 600 puntos",
+                                              style: TextStyle(
+                                                  color: Colors.white)),
+                                        ),
+                                        ListTile(
+                                          leading: Icon(
+                                              Icons.assistant_photo_rounded,
+                                              color: Colors.white,
+                                              size: 30),
+                                          title: Text("Siguiente recompensa:",
+                                              style: TextStyle(
+                                                  color: Colors.white)),
+                                          subtitle: Text("hhh",
+                                              style: TextStyle(
+                                                  color: Colors.white)),
                                         ),
                                       ],
                                     ),
