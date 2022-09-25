@@ -21,9 +21,9 @@ class _HomeWidgetState extends State<HomeWidget> {
     List<Widget> widgetOptions = <Widget>[
       HomeScreen(),
       CodeUnlock(),
-      SettingsScreen(),
       ProfilePage(),
-      CategorySpend()
+      CategorySpend(),
+      SettingsScreen()
     ];
     void onTabTapped(index) {
       setState(() {
@@ -58,12 +58,6 @@ class _HomeWidgetState extends State<HomeWidget> {
               label: ""),
           BottomNavigationBarItem(
               icon: Icon(
-                Icons.settings,
-                color: Colors.white,
-              ),
-              label: ""),
-          BottomNavigationBarItem(
-              icon: Icon(
                 Icons.diamond,
                 color: Colors.white,
               ),
@@ -71,6 +65,12 @@ class _HomeWidgetState extends State<HomeWidget> {
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.account_balance,
+                color: Colors.white,
+              ),
+              label: ""),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.settings,
                 color: Colors.white,
               ),
               label: ""),

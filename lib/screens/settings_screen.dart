@@ -66,7 +66,15 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               SettingsTile(
                 icon: Icons.logout_rounded,
-                title: "Cerrar Sesion",
+                title: "Cerrar Sesión",
+                onTap: () {},
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              SettingsTile(
+                icon: Icons.face,
+                title: "Comparte tu Opinión",
                 onTap: () {},
               ),
             ],
