@@ -3,7 +3,6 @@ import 'package:flutter_application_3/screens/home.dart';
 import 'package:flutter_application_3/screens/recompensas.dart';
 import 'package:flutter_application_3/screens/settings_screen.dart';
 import 'package:flutter_application_3/screens/transacciones.dart';
-import 'package:flutter_application_3/screens/transactionPage.dart';
 import 'package:flutter_svg/svg.dart';
 
 class HomeWidget extends StatefulWidget {
