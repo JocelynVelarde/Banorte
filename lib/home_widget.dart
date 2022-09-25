@@ -31,6 +31,7 @@ class _HomeWidgetState extends State<HomeWidget> {
     return Scaffold(
       body: widgetOptions.elementAt(selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.black,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.black,
         showSelectedLabels: true,
@@ -40,21 +41,31 @@ class _HomeWidgetState extends State<HomeWidget> {
         currentIndex: selectedIndex,
         items: [
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/home-icon.svg'),
+            icon: SvgPicture.asset(
+              'assets/home-icon.svg',
+              color: Colors.redAccent,
+            ),
             label: "",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset(
               'assets/transactions-icon.svg',
+              color: Colors.redAccent,
             ),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/settings-icon.svg'),
+            icon: SvgPicture.asset(
+              'assets/settings-icon.svg',
+              color: Colors.redAccent,
+            ),
             label: "",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/smiley-icon.svg'),
+            icon: SvgPicture.asset(
+              'assets/smiley-icon.svg',
+              color: Colors.redAccent,
+            ),
             label: "",
           ),
         ],
