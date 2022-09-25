@@ -16,14 +16,15 @@ class _CodeUnlockState extends State {
  void initState() {
    // TODO: implement initState
    super.initState();
-   displayCode = getNextCode();
+   displayCode = " ";
  }
  @override
  Widget build(BuildContext context) {
    return Scaffold(
      appBar: AppBar(
-       title: Text('CODE UNLOCK'),
-       backgroundColor: Colors.blue,
+       centerTitle: true,
+       title: Text('Transacciones'),
+       backgroundColor: Color.fromARGB(0, 33, 149, 243),
      ),
      body: Builder(
        builder: (context) =>
@@ -36,7 +37,7 @@ class _CodeUnlockState extends State {
                child: Text(
                  displayCode,
                  style: TextStyle(
-                   color: Colors.blue,
+                   color: Color.fromARGB(0, 255, 255, 255),
                    fontSize: 50,
                    fontWeight: FontWeight.bold
                    // fontFamily: AppTextStyle.robotoBold
@@ -48,8 +49,8 @@ class _CodeUnlockState extends State {
                child: Container(
                  decoration: BoxDecoration(
                      borderRadius: BorderRadius.circular(5),
-                     color: Colors.orangeAccent,
-                     border: Border.all(color: Colors.orangeAccent, width: 1.5)),
+                     color: Color.fromARGB(0, 255, 172, 64),
+                     border: Border.all(color: Color.fromARGB(0, 255, 82, 82), width: 0.5)),
                  child: Padding(
                    padding: EdgeInsets.only(left: 15),
                    child: TextField(
@@ -57,14 +58,15 @@ class _CodeUnlockState extends State {
                      readOnly: true,
                      textAlign: TextAlign.center,
                      style: TextStyle(
-                       color: Colors.black,
+                       color: Color.fromARGB(255, 255, 255, 255),
                        fontSize: 26,
                        // fontWeight: FontWeight.bold
                        // fontFamily: AppTextStyle.robotoBold
                      ),
                      decoration: InputDecoration(
                        border: InputBorder.none,
-                       hintText: 'Enter PIN',
+                       hintText: 'Ingrese Cantidad', 
+                       hintStyle: TextStyle(color: Colors.white),
                      ),
                      // controller: userDisplayName,
                    ),
@@ -80,23 +82,11 @@ class _CodeUnlockState extends State {
                  setState(() {});
                },
                onSubmit: (String pin) {
-                 if (pin.length != 4) {
-                   (pin.length == 0) ? showInSnackBar('Please Enter Pin') : showInSnackBar('Wrong Pin');
-                   return;
-
-                 } else {
-
-                   pinController.text = pin;
-
-                   if (pinController.text == displayCode){
-                     showInSnackBar('Pin Match');
-                     setState(() {
-                       displayCode = getNextCode();
-                     });
-                   }else{
-                     showInSnackBar('Wrong pin');
-                   }
-                   print('Pin is ${pinController.text}');
+                 if (pinController.text == "\$0.00") {
+                  showInSnackBar('Ingrese una cantidad valida');
+                 }
+                 else{
+                  // Link
                  }
                },
              ),
@@ -109,13 +99,5 @@ class _CodeUnlockState extends State {
 
  void showInSnackBar(String value) {
    ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: new Text(value)));
- }
-
- getNextCode(){
-   pinController.text = '';
-   var rng = new Random();
-   var code = (rng.nextInt(9000) + 1000).toString();
-   print('Random No is : $code');
-   return code;
  }
 }

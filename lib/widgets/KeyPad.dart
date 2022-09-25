@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 class KeyPad extends StatelessWidget{
@@ -48,10 +49,15 @@ class KeyPad extends StatelessWidget{
            children: [
              iconButtonWidget(Icons.backspace, () {
                if (pinController.text.length > 0) {
+                if (pinController.text.length == 5){
+                  pinController.text = "";
+                }
+                else{
                  pinController.text = pinController.text
-                     .substring(0, pinController.text.length - 1);
+                     .substring(0, pinController.text.length - 4) + ".00";
+                }
                }
-               if (pinController.text.length > 5) {
+               if (pinController.text.length > 100) {
                  pinController.text = pinController.text.substring(0, 3);
                }
                onChange(pinController.text);
@@ -59,7 +65,7 @@ class KeyPad extends StatelessWidget{
              buttonWidget('0'),
              !isPinLogin
                  ? iconButtonWidget(Icons.check_circle, () {
-                     if (pinController.text.length > 5) {
+                     if (pinController.text.length > 100) {
                        pinController.text = pinController.text.substring(0, 3);
                      }
                      onSubmit(pinController.text);
@@ -72,6 +78,7 @@ class KeyPad extends StatelessWidget{
        ],
      ),
    );
+   
  }
 
  buttonWidget(String buttonText) {
@@ -79,17 +86,33 @@ class KeyPad extends StatelessWidget{
      height: buttonSize,
      width: buttonSize,
      child: ElevatedButton(
-     
+       style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(buttonSize / 2),
+                side: BorderSide(color: Color.fromARGB(0, 255, 255, 255), width: 0.5)
+                ),
+                backgroundColor: Color.fromARGB(255, 28, 29, 30),
+                ),     
        onPressed: () {
-         if (pinController.text.length <= 3) {
-           pinController.text = pinController.text + buttonText;
+         if (pinController.text.length <= 14) {
+           if (pinController.text.length < 4) {
+           pinController.text = '\$' + pinController.text + buttonText + ".00";
            onChange(pinController.text);
+           }
+           else if (pinController.text == "\$0.00") {
+                 }
+           else{
+            pinController.text = pinController.text
+                     .substring(0, pinController.text.length - 3) + buttonText + ".00";
+           onChange(pinController.text);
+           }
          }
        },
        child: Center(
          child: Text(
            buttonText,
-           style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 25),
+           style: TextStyle(fontWeight: FontWeight.bold,
+           color: Colors.white,fontSize: 25),
          ),
        ),
      ),
@@ -102,7 +125,11 @@ class KeyPad extends StatelessWidget{
      child: Container(
        height: buttonSize,
        width: buttonSize,
-       decoration: BoxDecoration(color: Colors.orangeAccent, shape: BoxShape.circle),
+       decoration: BoxDecoration(color: Color.fromARGB(0, 255, 255, 255), 
+       shape: BoxShape.circle,
+       border: Border.all(color: Colors.redAccent, width: 0.5),
+       ),
+       
        child: Center(
          child: Icon(icon,
            size: 30,
