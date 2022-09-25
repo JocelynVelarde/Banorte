@@ -128,7 +128,7 @@ class KeyPad extends StatelessWidget {
         decoration: BoxDecoration(
           color: Color.fromARGB(0, 255, 255, 255),
           shape: BoxShape.circle,
-          border: Border.all(color: Colors.redAccent, width: 0.5),
+          border: Border.all(color: Colors.redAccent, width: 1),
         ),
         child: Center(
           child: Icon(
