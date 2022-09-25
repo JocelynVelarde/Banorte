@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_3/screens/home.dart';
+import 'package:flutter_application_3/screens/recompensas.dart';
 import 'package:flutter_application_3/screens/settings_screen.dart';
 import 'package:flutter_application_3/screens/transacciones.dart';
 import 'package:flutter_application_3/screens/transactionPage.dart';
@@ -20,7 +21,7 @@ class _HomeWidgetState extends State<HomeWidget> {
       HomeScreen(),
       CodeUnlock(),
       SettingsScreen(),
-      HomeScreen(),
+      ProfilePage(),
     ];
     void onTabTapped(index) {
       setState(() {
