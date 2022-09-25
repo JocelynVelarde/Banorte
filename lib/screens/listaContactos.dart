@@ -60,7 +60,7 @@ Widget _buildSelectIcon(bool isSelected, Map data) {
       );
     } else {
       return CircleAvatar(
-        child: Text('${data['name'][0]}'),
+        child: Text('${data['name'][0]}'+ '${data['name'][1]}'),
         backgroundColor: Colors.redAccent,
       );
     }
